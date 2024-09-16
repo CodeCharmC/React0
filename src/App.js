@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div className='App'>
       <h1>A Counter</h1>
-      <button onClick={() => alert('clicked')}>
+      <button onClick={() => setCounter(1000)}>{/*change the state*/}
         +
       </button>
       <h1>{counter}</h1>
