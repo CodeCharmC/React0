@@ -1,39 +1,28 @@
 import './App.css';
 
-function App() {
-  //create a variable
-  const name = 'Dalia';
 
-  //diffrent ternary expression
-  const isUserLoggedIn = false;
+{/*here Person is a component*/}
+const Person = () => {
+  return (
+    <>
+      <h1>First Name: Dalia</h1>
+      <h1>Last Name: Makhmal</h1>
+      <h1>Age: 20</h1>
+    </>
+  )
+}
+
+
+const App = () => {
   return (
     <div className="App">
-      <h1>Hello, {2 + 2 + 2 * 8}! @_@</h1>
-      
-      {//ternary expression:
-        name ? (
-          <>
-            <h1>{name}</h1>
-              {//ternary expression:
-                isUserLoggedIn ? (
-                  <>
-                    <h1>{name} is logged in</h1>
-                  </>
-                ) : (
-                    <>
-                      <h1>{name} is not logged in !_!</h1>
-                      <h6>Thank you</h6>
-                    </>
-                )
-              }
-          </>
-        ) : (
-            <>
-              <h1>There is no name !_!</h1>
-              <h6>Thank you</h6>
-            </>
-        )
-      }
+      <h1>Hello World</h1>
+      {/*And we can call the component*/}
+      <Person/>   
+      <Person/>
+      <Person/>
+      <Person/>
+      <Person/>
     </div>
   );
 }
