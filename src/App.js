@@ -12,15 +12,19 @@ import { useState } from 'react';
 const App = () => {
   {/*a concept of array destructuring
   const [name Of The State, set Function Of The State or Setterfunction] = useState();*/}
-  const [counter, setCounter] = useState();
+  const [counter, setCounter] = useState(0);
+
   return (
     <div className='App'>
       <h1>A Counter</h1>
-      <button onClick={() => setCounter(1000)}>{/*change the state*/}
+      <button
+        onClick={() => setCounter((prevCount) => (prevCount + 1))}>{/*Another call-back function inside the setterfunction setCounter; change the state*/}
         +
       </button>
       <h1>{counter}</h1>
-      <button>-</button>
+      <button onClick={() => setCounter((prevCount) => prevCount-1)}>
+        -
+      </button>
     </div>
   );
 }
