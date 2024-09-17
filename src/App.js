@@ -9,7 +9,7 @@ const App = () => {
 
   useEffect(() => {
     setCounter(100);
-  }, []); {/*[] here is a deppendency array*/}
+  }, [counter]); {/*[] here is a deppendency array*/}
 
   return (
     <div className='App'>
