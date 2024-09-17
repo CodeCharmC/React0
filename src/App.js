@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import './App.css';
+import searchIcon from './search.svg';
 
 //e3768f
 const API_URL = 'https://www.omdbapi.com/?apikey=e3768f';
@@ -18,7 +20,9 @@ const App = () => {
    }, []);
 
    return (
+      <>
       <h1>App</h1>
+      </>
    );
 }
 
