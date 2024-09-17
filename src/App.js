@@ -45,9 +45,14 @@ const App = () => {
             />
          </div>
          <div className='container'>
-            {movies ? (
-               <MovieCard movie1={movie1}/>
-            ) :  (
+            {movies.length > 0
+               ? (
+                  <div className='movie-container'>
+                     {movies.map((movie) => (
+                        <MovieCard movie={movie} />
+                     ))}                     
+                  </div>               
+               ) : (
                   <div className='empty'>
                      <h2>No movies found</h2>
                   </div>
